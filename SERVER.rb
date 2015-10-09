@@ -1,12 +1,15 @@
 class SERVER
 	require 'socket'
 
-	server = TCPServer.open(2000)
+	server = TCPServer.open('0.0.0.0', 8000)
 
 	loop do                        
-		Thread.start(server.accept) do |client|
-			client.puts(Time.now.ctime) 
+		Thread.start(socket = server.accept) do |client|
+			request = socket.gets
+			STDERR.puts request
+			response = "Hello World!\n"
 			client.puts "Closing the connection. Bye!"
 			client.close
+		end
 	end
 end
