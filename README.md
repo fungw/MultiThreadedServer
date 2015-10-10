@@ -5,9 +5,10 @@
 Simple multithreaded Ruby server and client implementation.
 
 The server is designed to take in two types of messages
-1. KILL\_SERVICE
+- KILL\_SERVICE
 - Kill status is received by both client and server.
-2. HELO #{text}
+
+- HELO #{text}
 - Message below is returned to client from server when HELO message is received.
 - HELO #{text}
 - IP: #{client\_ip}
