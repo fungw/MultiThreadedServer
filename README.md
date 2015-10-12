@@ -16,6 +16,6 @@ Message below is returned to client from server when HELO message is received.
 
 ## Command-line
 ###To run the server:
-start.sh 8000
+bash start.sh 8000
 ###To run a client:
 ruby CLIENT.rb
