@@ -1,5 +1,5 @@
 # CS4032 Distributed Systems Lab 2
-Wesley Fung (fungw@tcd.ie)
+###Wesley Fung (fungw@tcd.ie)
 
 Simple multithreaded Ruby server and client implementation.
 The server is designed to take in two types of messages:
