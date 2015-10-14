@@ -6,6 +6,7 @@ class SERVER
 	port = ARGV[0] 
 	server = TCPServer.open(address, port)
 	puts "Server is running on #{address} on port #{port}." 
+	student_id = "12304003"
 
 	thread_pool = Queue.new
 	(0..50).to_a.each{|x| thread_pool.push x }
@@ -24,11 +25,11 @@ class SERVER
 						if checkHELO == 'HELO' 
 							if message == 'HELO'
 								STDERR.puts 'Missing HELO text'
-								response = "#{message}\nIP:#{client.peeraddr[2]}\nPort:#{client.peeraddr[1]}\nStudentID:\n"
+								response = "#{message}\nIP:#{client.peeraddr[2]}\nPort:#{client.peeraddr[1]}\nStudentID:#{student_id}\n"
 							else
 								heloMessage = message.split('HELO')[1].strip
 								STDERR.puts 'HELO message recieved'
-								response = "#{message}\nIP:#{client.peeraddr[2]}\nPort:#{client.peeraddr[1]}\nStudentID:\n"
+								response = "#{message}\nIP:#{client.peeraddr[2]}\nPort:#{client.peeraddr[1]}\nStudentID:#{student_id}\n"
 							end
 						end
 						if message == 'KILL_SERVICE'

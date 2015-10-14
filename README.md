@@ -1,5 +1,6 @@
 # CS4032 Distributed Systems Lab 2
-###Wesley Fung (fungw@tcd.ie)
+###Wesley Fung (12304003)
+###fungw@tcd.ie
 
 Multithreaded Ruby server with thread pooling and client implementation.
 The server is designed to take in two types of messages:
