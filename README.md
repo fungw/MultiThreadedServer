@@ -1,7 +1,7 @@
 # CS4032 Distributed Systems Lab 2
 ###Wesley Fung (fungw@tcd.ie)
 
-Simple multithreaded Ruby server and client implementation.
+Multithreaded Ruby server with thread pooling and client implementation.
 The server is designed to take in two types of messages:
 
 ### KILL\_SERVICE
@@ -16,8 +16,11 @@ Message below is returned to client from server when HELO message is received.
 
 ## Command-line
 ###To run the server:
-sh ./start.sh 8000
+sh start.sh 8000
 ###To run a client:
-ruby CLIENT.rb
+ruby client.rb
 ###To run the test:
-sh ./multiClient.sh
+sh multiClient.sh
+NOTE: Make sure you run the script from inside the test folder.
+multiClient.sh will not be able to find clientAuto.rb if you run
+it from anywhere else.
