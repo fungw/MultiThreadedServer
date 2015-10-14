@@ -21,6 +21,6 @@ sh start.sh 8000
 ruby client.rb
 ###To run the test:
 sh multiClient.sh
-NOTE: Make sure you run the script from inside the test folder.
+> NOTE: Make sure you run the script from inside the test folder.
 multiClient.sh will not be able to find clientAuto.rb if you run
 it from anywhere else.
