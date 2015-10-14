@@ -20,4 +20,4 @@ sh ./start.sh 8000
 ###To run a client:
 ruby CLIENT.rb
 ###To run the test:
-sh ./test/multiClient.sh
+sh ./multiClient.sh
