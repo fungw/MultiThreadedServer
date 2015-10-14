@@ -4,7 +4,7 @@ class SERVER
 
 	address = '0.0.0.0'
 	port = ARGV[0] 
-	server = TCPServer.open('0.0.0.0', port)
+	server = TCPServer.open(address, port)
 	puts "Server is running on #{address} on port #{port}." 
 
 	work_q = Queue.new
