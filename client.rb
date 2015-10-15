@@ -9,7 +9,7 @@ class CLIENT
 
 	# Asks for user input until break condition is satisfied
 	loop do
-	puts "\nEnter a word followed by <ENTER> to send request and have the server echo it back to you! \nSend END to quit."
+	puts "\nEnter a word followed by <ENTER> to send request and have the server echo it back to you! \nSend KILL_SERVICE to quit."
 	user_input = gets.chomp
 	# Accounting for sentences
 	user_input.gsub! ' ', '%20'
