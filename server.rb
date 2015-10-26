@@ -23,18 +23,16 @@ class SERVER
 						# GET /echo.php?message=hello HTTP/1.0
 						response = "Undefined, request error."
 						# Parse the GET request
-						parseRequest = request.split('=')[1].strip
-						message = parseRequest.split(' HTTP')[0]
-						checkHELO = message.split('%20')[0].strip
+						checkHELO = request.split(' ')[0].strip
+						message = request.split(' ')[1].strip
 						if checkHELO == 'HELO' 
 							# Minimal error handling
-							if message == 'HELO'
+							if message == ''
 								STDERR.puts 'Missing HELO text'
-								response = "#{message}\nIP:#{client.peeraddr[2]}\nPort:#{client.peeraddr[1]}\nStudentID:#{student_id}\n"
+								response = "#{request}IP:52.23.218.143\nPort:#{443}\nStudentID:#{student_id}\n"
 							else
-								heloMessage = message.split('HELO')[1].strip
 								STDERR.puts 'HELO message recieved'
-								response = "#{message}\nIP:#{client.peeraddr[2]}\nPort:#{client.peeraddr[1]}\nStudentID:#{student_id}\n"
+								response = "#{request}IP:52.23.218.143\nPort:#{443}\nStudentID:#{student_id}\n"
 							end
 						end
 						if message == 'KILL_SERVICE'
